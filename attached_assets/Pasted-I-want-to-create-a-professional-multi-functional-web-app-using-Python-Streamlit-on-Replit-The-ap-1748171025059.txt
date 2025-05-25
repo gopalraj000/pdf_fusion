@@ -1,0 +1,91 @@
+I want to create a professional, multi-functional web app using Python + Streamlit on Replit. The app should allow users to perform advanced PDF, Word, and Image conversions and manipulations. Use streamlit for the UI. Preferably, processes should run in the browser using Pyodide or WebAssembly. If not possible, server-side temporary file processing is acceptable.
+
+🧠 Core Features:
+PDF to Searchable PDF using OCR in English and Hindi (with pytesseract).
+
+Merge PDFs:
+
+Upload multiple PDFs.
+
+📌 Smart Duplex Merge: ☑️ Option to "Add blank page after odd-page PDFs".
+↳ Ensures each new file starts on a fresh sheet when printing double-sided.
+
+Split PDF:
+
+By page range or individual pages.
+
+With page preview if possible.
+
+PDF to Word:
+
+Convert any PDF to DOCX.
+
+Force all numbers to appear in English digits, even in Hindi content.
+
+Word to PDF:
+
+Upload DOCX, convert to PDF.
+
+PDF to Image:
+
+One image per page, with resolution options.
+
+Image(s) to PDF:
+
+Combine multiple uploaded images into one PDF.
+
+🧩 Extra Features:
+Compress PDF – reduce file size.
+
+Reorder PDF Pages – drag & drop or numeric order edit.
+
+Password Protect/Unlock PDF.
+
+Extract Images from PDF.
+
+Extract Text Only from PDF.
+
+Auto Language Detection for OCR – detect Hindi or English automatically.
+
+Batch File Processing.
+
+PDF Page Preview.
+
+Dark Mode / Light Mode Toggle.
+
+Drag & Drop File Upload.
+
+Progress Bar + Log Panel.
+
+QR Code for Download Links.
+
+Temporary Download Link (expires after 30 mins).
+
+Optional Watermark on output PDFs.
+
+📊 UI Structure (PDF Tools Section)
+Feature	Input	Options / Settings	Output
+Searchable PDF	PDF upload	OCR Language: English / Hindi / Auto	Searchable PDF
+Merge PDFs	Upload multiple PDFs	☑️ Add blank page after odd pages	Merged PDF
+Split PDF	Upload one PDF	Select page range / preview UI	Split PDFs
+PDF to Word	Upload PDF	Force numbers in English ☑️	Word document (.docx)
+Word to PDF	Upload Word file (.docx)	-	PDF
+PDF to Image	Upload PDF	DPI/Quality options	Images (PNG/JPEG)
+Image to PDF	Upload image files	Reorder images (optional)	Merged PDF
+Compress PDF	Upload PDF	Compression level	Smaller PDF
+Reorder PDF	Upload PDF	Drag & drop interface	Reordered PDF
+Protect/Unlock	Upload PDF	Add/remove password	Secured or opened PDF
+Extract Images	Upload PDF	-	Extracted images
+Extract Text	Upload PDF	OCR fallback ☑️ (optional)	.txt or .docx
+Others	-	Dark Mode ☑️, QR Code Link ☑️	Improved UX
+
+📌 Implementation Requirements:
+Use Python libraries: PyMuPDF, PyPDF2, pdfplumber, pdf2image, pytesseract, Pillow, docx2pdf, fitz, python-docx, pdfminer, qrcode, etc.
+
+Allow file upload/download with preview.
+
+Implement strong exception handling and file cleanup.
+
+Modular, maintainable code structure.
+
+Clean responsive UI with tabs or sidebar layout.
